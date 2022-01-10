@@ -18,7 +18,9 @@ export default function App() {
   });
 
   // もしロードが終わっていない場合、nullを返す
-  if (!fontsLoaded) return null;
+  if (!fontsLoaded) {
+    return null;
+  }
 
   return (
     <TopScreen />

@@ -3,8 +3,13 @@ import {
   View, Text, StyleSheet, Image, ImageBackground,
 } from 'react-native';
 
-// グローバルデザインの読み込み
+// ボタンの読み込み
+import RectButton from '../components/RectButton';
+import WireButton from '../components/WireButton';
+
+// グローバルデザインとカラーパレットの読み込み
 import globalStyle from '../utils/GlobalStyle';
+import colors from '../utils/Color';
 
 // 画像の読み込み
 const backgroundImage = require('../../assets/system/topScreen.jpg');
@@ -27,25 +32,48 @@ export default function TopScreen() {
           </View>
         </ImageBackground>
       </View>
-      <View style={styles.banner}>
-        <Text>Footer</Text>
+      <View style={styles.bannerOuter}>
+        <View style={styles.bannerInner}>
+          <WireButton label="LOG IN" rectStyle={styles.loginButton} />
+          <RectButton label="REGISTER" rectStyle={styles.loginButton} />
+        </View>
       </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  loginButton: {
+    alignContent: 'center',
+    alignItems: 'center',
+    width: '40%', // 画面の幅の30%
+  },
+  bannerInner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+  },
+  bannerOuter: {
+    height: 128,
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
   footerMessage: {
     fontSize: 16,
     marginVertical: 10,
-    fontFamily: 'Roboto',
-    color: '#FFFFFF',
+    color: colors.textRegular,
+    textShadowRadius: 10,
+    textShadowColor: '#000',
+    padding: 10,
   },
   copyright: {
     marginVertical: 10,
     fontSize: 14,
     fontFamily: 'Comfortaa_300Light',
-    color: '#FFFFFF',
+    color: colors.textRegular,
+    textShadowRadius: 4,
+    textShadowColor: '#000',
+    padding: 10,
   },
   featureFooter: {
     padding: 10,
@@ -54,12 +82,18 @@ const styles = StyleSheet.create({
   appGnome: {
     fontSize: 24,
     fontFamily: 'Comfortaa_300Light',
-    color: '#FFFFFF',
+    color: colors.textRegular,
+    textShadowRadius: 10,
+    textShadowColor: '#000',
+    margin: 10,
   },
   appTitle: {
     fontSize: 48,
     fontFamily: 'Comfortaa_700Bold',
-    color: '#FFFFFF',
+    color: colors.textRegular,
+    textShadowRadius: 10,
+    textShadowColor: '#000',
+    margin: 10,
   },
   icon: {
     width: 128,
@@ -77,11 +111,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   feature: {
-    flex: 6,
-    backgroundColor: '#00FFFF',
-  },
-  banner: {
-    flex: 1,
-    backgroundColor: '#FF0000',
+    flex: 5,
+    backgroundColor: colors.backgroundPrimary,
   },
 });
