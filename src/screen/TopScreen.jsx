@@ -11,9 +11,20 @@ import WireButton from '../components/WireButton';
 import globalStyle from '../utils/GlobalStyle';
 import colors from '../utils/Color';
 
+// 壁紙読み込み用オブジェクトの読み込み
+// import Wallpaper from '../components/Wallpaper';
+
 // 画像の読み込み
-const backgroundImage = require('../../assets/system/topScreen.jpg');
 const iconImage = require('../../assets/system/logo_x512.png');
+
+// const backgroundImage = wallpaper();
+
+// Longhorn
+// const backgroundImage = require('../../assets/system/topScreen.jpg');
+// space 01
+// const backgroundImage = require('../../assets/system/space01.jpg');
+// space 02
+const backgroundImage = require('../../assets/system/space02.jpg');
 
 export default function TopScreen() {
   return (
