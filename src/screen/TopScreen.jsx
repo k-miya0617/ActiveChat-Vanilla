@@ -23,7 +23,8 @@ const iconImage = require('../../assets/system/logo_x512.png');
 // space 02
 const backgroundImage = require('../../assets/system/wallpaper/05.jpeg');
 
-export default function TopScreen() {
+export default function TopScreen(props) {
+  const { navigation } = props;
   return (
     <View style={[globalStyle.container]}>
       <View style={styles.feature}>
@@ -42,8 +43,28 @@ export default function TopScreen() {
       </View>
       <View style={styles.bannerOuter}>
         <View style={styles.bannerInner}>
-          <WireButton label="LOG IN" rectStyle={styles.loginButton} />
-          <RectButton label="REGISTER" rectStyle={styles.loginButton} />
+          <WireButton
+            label="LOG IN"
+            rectStyle={styles.loginButton}
+            onPress={() => {
+              navigation.reset({
+                index: 0,
+                routes: [{ name: 'Register1' }],
+              });
+            }}
+          />
+          <RectButton
+            label="REGISTER"
+            rectStyle={styles.loginButton}
+            onPress={() => {
+              /* navigation.reset({
+                index: 0,
+                routes: [{ name: 'Register1' }],
+              });
+              */
+              navigation.navigate('Register1');
+            }}
+          />
         </View>
       </View>
     </View>

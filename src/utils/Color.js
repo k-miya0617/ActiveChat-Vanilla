@@ -3,7 +3,7 @@ export default {
   bacgroundDark: '#1E1F1C',
   backgroundBright: '#414339',
   appColor: '#F8821C',
-  info: '5ED2EB',
+  info: '#5ED2EB',
   warning: 'F1005F',
   textRegular: '#FFFFFF',
   textDisable: '#878787',

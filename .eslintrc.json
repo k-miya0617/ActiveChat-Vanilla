@@ -23,6 +23,10 @@
         ],
         "no-use-before-define": 0,
         "react/prop-types": ["error", { "ignore": ["navigation"] }],
-        "import/prefer-default-export": 0
+        "import/prefer-default-export": 0,
+        "react/no-unstable-nested-components": [
+            "off",
+            { "allowAsProps": true}
+        ]
     }
 }
