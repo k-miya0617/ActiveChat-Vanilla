@@ -11,9 +11,6 @@ import WireButton from '../components/WireButton';
 import globalStyle from '../utils/GlobalStyle';
 import colors from '../utils/Color';
 
-// 壁紙読み込み用オブジェクトの読み込み
-// import Wallpaper from '../components/Wallpaper';
-
 // 画像の読み込み
 const iconImage = require('../../assets/system/logo_x512.png');
 
@@ -24,7 +21,7 @@ const iconImage = require('../../assets/system/logo_x512.png');
 // space 01
 // const backgroundImage = require('../../assets/system/space01.jpg');
 // space 02
-const backgroundImage = require('../../assets/system/space02.jpg');
+const backgroundImage = require('../../assets/system/wallpaper/05.jpeg');
 
 export default function TopScreen() {
   return (
