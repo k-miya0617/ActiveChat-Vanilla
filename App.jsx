@@ -63,7 +63,7 @@ export default function App() {
             title: 'Register',
             headerTitleStyle: {
               color: colors.appColor,
-              fontSize: 42,
+              fontSize: 36,
             },
             allowAsProps: true,
             headerLeft: () => (

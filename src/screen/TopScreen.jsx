@@ -46,22 +46,11 @@ export default function TopScreen(props) {
           <WireButton
             label="LOG IN"
             rectStyle={styles.loginButton}
-            onPress={() => {
-              navigation.reset({
-                index: 0,
-                routes: [{ name: 'Register1' }],
-              });
-            }}
           />
           <RectButton
             label="REGISTER"
             rectStyle={styles.loginButton}
             onPress={() => {
-              /* navigation.reset({
-                index: 0,
-                routes: [{ name: 'Register1' }],
-              });
-              */
               navigation.navigate('Register1');
             }}
           />
